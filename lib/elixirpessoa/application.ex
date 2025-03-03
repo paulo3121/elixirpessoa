@@ -8,6 +8,11 @@ defmodule Elixirpessoa.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Plug.Cowboy.child_spec(
+	scheme: :http,
+	plug: Elixirpessoa.Endpoint,
+	options: [port: 4000]
+      )
       # Starts a worker by calling: Elixirpessoa.Worker.start_link(arg)
       # {Elixirpessoa.Worker, arg}
     ]
