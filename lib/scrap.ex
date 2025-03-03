@@ -18,7 +18,7 @@ defmodule Scrap do
 	{_s, _, []} -> "\n"
 	{_s, _, [linha]} -> linha <> "\n"
       end)
-	poesia = "#{autor}\n\n#{id}: #{titulo}\n#{linhas}"
+	"#{autor}\n\n#{id}: #{titulo}\n#{linhas}"
     end
   end
 end
